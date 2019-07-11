@@ -1,5 +1,5 @@
 {
-    "name": "tinyredis-mode",
+    "name": "tinyredis-mod",
     "description": "Redis driver for D.",
     "authors": ["Adil Baig", "Orfeo Da Vià"],
     "homepage": "https://github.com/o3o/tinyredis-mod",
