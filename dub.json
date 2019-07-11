@@ -1,8 +1,8 @@
 {
-    "name": "tinyredis",
+    "name": "tinyredis-mode",
     "description": "Redis driver for D.",
-    "authors": ["Adil Baig"],
-    "homepage": "http://adilbaig.github.com/Tiny-Redis/",
+    "authors": ["Adil Baig", "Orfeo Da Vià"],
+    "homepage": "https://github.com/o3o/tinyredis-mod",
     "license": "ISC",
     "targetPath": "bin/",	
     "configurations": [
