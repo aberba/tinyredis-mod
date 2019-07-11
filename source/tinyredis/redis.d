@@ -63,7 +63,7 @@ public :
 
         	conn.send(toMultiBulk(key, args));
         	Response[] r = receiveResponses(conn, 1);
-            return cast(R)(r[0]);
+         return cast(R)(r[0]);
         }
 
         R send(R = Response)(string cmd)
@@ -282,4 +282,15 @@ unittest
     // A BLPOP times out to a Nil multibulk
     response = redis.send("BLPOP nonExistentList 1");
     assert(response.isNil());
+
+    int cursor;
+    redis.send("FLUSHDB");
+    writeln("********************");
+    //assert(false);
+
+    do {
+       response = redis.send("SCAN", cursor);
+       cursor = response.values[0].toInt;
+       //writefln("Response %s", response);
+    } while (cursor > 0);
 }
